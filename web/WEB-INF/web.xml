@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>4ITG_ITELEC2C_EslabonEspinosa_MP2</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>jdbcDriver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>ProcessFactoryAircraftManufacturer</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessFactoryAircraftManufacturer</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProcessFactoryAircraftManufacturer</servlet-name>
+		<url-pattern>/procacmanufacturerselection.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessFactoryAircraftType</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessFactoryAircraftType</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProcessFactoryAircraftType</servlet-name>
+		<url-pattern>/procaircrafttype.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessOrder</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessOrder</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProcessOrder</servlet-name>
+		<url-pattern>/procorder.html</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProcessRevive</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessRevive</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ProcessRevive</servlet-name>
+		<url-pattern>/procrevive.html</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ProcessSold</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessSold</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ProcessSold</servlet-name>
+		<url-pattern>/procsold.html</url-pattern>
+	</servlet-mapping>
+	
+
+	<servlet>
+		<servlet-name>ProcessDecommission</servlet-name>
+		<servlet-class>com.aviation.controller.ProcessDecommission</servlet-class>
+		<init-param>
+			<param-name>jdbcUrl</param-name>
+			<param-value>jdbc:mysql://localhost:3306/itelec2c_mp2</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserName</param-name>
+			<param-value>root</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dbUserPassword</param-name>
+			<param-value></param-value>
+		</init-param>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>ProcessDecommission</servlet-name>
+		<url-pattern>/procremove.html</url-pattern>
+	</servlet-mapping>
+
+</web-app>
